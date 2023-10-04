@@ -1,0 +1,9 @@
+{
+	"development": {
+		"username": "postgres",
+		"password": "rian2015",
+		"database": "database_ch4_fsw2_dev",
+		"host": "127.0.0.1",
+		"dialect": "postgres"
+	}
+}

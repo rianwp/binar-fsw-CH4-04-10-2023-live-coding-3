@@ -2,7 +2,9 @@ const router = require("express").Router()
 
 const Product = require("../controllers/productController")
 
-router.post("/", Product.createProduct)
+const uploader = require("../middlewares/uploader")
+
+router.post("/", uploader.single("image"), Product.createProduct)
 router.get("/", Product.findProduct)
 router.get("/:id", Product.findProductById)
 router.patch("/:id", Product.updateProduct)
